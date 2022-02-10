@@ -1,3 +1,3 @@
-# GitHub Actions Deep Dive
+# GitHub Pages Test Repo
 
-A simple Lambda function that can be deployed via a GitHub Actions Workflow. 
+Only using default text for now 
