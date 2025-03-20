@@ -1,0 +1,24 @@
+{
+    "routes": [
+        {
+            "route": "/*",
+            "allowedRoles": ["authenticated"]
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
+            "statusCode": 302
+        }
+    },
+    "auth": {
+        "identityProviders": {
+            "azureActiveDirectory": {
+                "registration": {
+                    "openIdIssuer": "https://login.microsoftonline.com/f4499f23-474a-4e92-bb59-54f5187fb300/v2.0",
+                    "clientIdSettingName": "e379f98f-923b-46fb-8fb8-aa2637cf3256"
+                }
+            }
+        }
+    }
+}
